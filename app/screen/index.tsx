@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import EnterScreen from "../components/EnterScreen";
-
+import Loader from "../components/Loader";
 
 export default function Screen() {
   const [started, setStarted] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
   const [initialCheckDone, setInitialCheckDone] = useState(false);
 
   useEffect(() => {
@@ -26,12 +27,21 @@ export default function Screen() {
   const handleStart = () => {
     sessionStorage.setItem("visited", "true");
     setStarted(true);
+    setShowLoader(true);
   };
 
   if (!initialCheckDone) {
     return null;
   }
   return (
-    <>{!started ? <EnterScreen onEnter={handleStart} /> : <div>Hello</div>}</>
+    <>
+      {!started ? (
+        <EnterScreen onEnter={handleStart} />
+      ) : showLoader ? (
+        <Loader onComplete={() => setShowLoader(false)} />
+      ) : (
+        <div>Hello</div>
+      )}
+    </>
   );
 }
