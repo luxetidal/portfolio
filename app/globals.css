@@ -24,3 +24,44 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#nav-overall {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  color: whitesmoke;
+  background-color: black; 
+}
+
+#nav-div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-a {
+  position: relative;
+  padding: 5px 10px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(225, 220, 220);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-a:hover::after {
+  width: calc(100% - 20px);
+}
