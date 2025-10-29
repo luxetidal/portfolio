@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { UIContext } from "../providers/UIProvider";
 import EnterScreen from "../components/EnterScreen";
 import Loader from "../components/Loader";
+import Hero from "../components/Hero";
 
 export default function Screen() {
   const [started, setStarted] = useState(false);
@@ -49,7 +50,7 @@ export default function Screen() {
           }}
         />
       ) : (
-        <div>Hello</div>
+        <Hero />
       )}
     </>
   );
