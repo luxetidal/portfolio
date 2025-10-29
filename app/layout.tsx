@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Header from "./components/Header";
 import { UIProvider } from "./providers/UIProvider";
+import ClientLayout from "./components/ClientLayout";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -17,8 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <UIProvider>
-          {<Header />}
-          {children}
+          <ClientLayout>{children}</ClientLayout>
         </UIProvider>
       </body>
     </html>
