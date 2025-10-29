@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UIContext } from "../providers/UIProvider";
 import EnterScreen from "../components/EnterScreen";
 import Loader from "../components/Loader";
 
@@ -7,6 +8,7 @@ export default function Screen() {
   const [started, setStarted] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const [initialCheckDone, setInitialCheckDone] = useState(false);
+  const { setShowLayout } = useContext(UIContext);
 
   useEffect(() => {
     const isBot = /bot|crawler|spider|crawling/i.test(navigator.userAgent);
@@ -17,17 +19,19 @@ export default function Screen() {
       setStarted(true);
     } else if (isHome && !alreadyVisited) {
       setStarted(false);
+      setShowLayout(false);
     } else {
       setStarted(true);
     }
 
     setInitialCheckDone(true);
-  }, []);
+  }, [setShowLayout]);
 
   const handleStart = () => {
-    sessionStorage.setItem("visited", "true");
-    setStarted(true);
+    localStorage.setItem("visited", "true");
     setShowLoader(true);
+    setShowLayout(false);
+    setStarted(true);
   };
 
   if (!initialCheckDone) {
@@ -38,7 +42,12 @@ export default function Screen() {
       {!started ? (
         <EnterScreen onEnter={handleStart} />
       ) : showLoader ? (
-        <Loader onComplete={() => setShowLoader(false)} />
+        <Loader
+          onComplete={() => {
+            setShowLoader(false);
+            setShowLayout(true);
+          }}
+        />
       ) : (
         <div>Hello</div>
       )}
