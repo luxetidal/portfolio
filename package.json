@@ -11,6 +11,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-three/fiber": "^9.4.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "gsap": "^3.13.0",
