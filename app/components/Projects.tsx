@@ -12,27 +12,27 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Natural Care Shop",
+    title: "Ogiya Wedding",
     description:
-      "An e-commerce platform for natural and wellness products, built for a smooth shopping experience.",
-    link: "https://www.naturalcareshop.ro/",
-    image: "/naturalcareshop.png",
+      "A modern Japanese wedding dress and photography website providing studio information, service details, and reservation access for Ogiya Wedding.",
+    link: "https://ogiya-wedding.jp/",
+    image: "/ogiyawedding.png",
     blurhash: "L1SPX|xvtn~q00t7_2Io00oe-pM|",
   },
   {
-    title: "Soft Thrive",
+    title: "YS Company Tokyo",
     description:
-      "A modern corporate website with fluid animations and a clean, professional design.",
-    link: "https://www.softthrive.com/",
-    image: "/softthrive.png",
+      "A clean and visually appealing corporate website for YS Company Tokyo, showcasing services, business information, and company highlights.",
+    link: "https://yscompany.tokyo/",
+    image: "/projectShine.png",
     blurhash: "L02$Hd9Z00~pneofp0WB00?a~V01",
   },
   {
-    title: "My Dental 360",
+    title: "Waphyto",
     description:
-      "A dental care platform offering comprehensive information and easy access to dental services.",
-    link: "https://mydental360.com/",
-    image: "/mydental.png",
+      "A premium skincare and wellness e-commerce platform offering high-quality beauty products with detailed product pages and a refined shopping experience.",
+    link: "https://waphyto.com/",
+    image: "/waphyto.png",
     blurhash: "LACZ35PqnOi_T0X9a|WA00+FIpkW",
   },
 ];
