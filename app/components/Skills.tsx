@@ -152,7 +152,7 @@ export const Skills: React.FC = () => {
                     mask-[radial-gradient(ellipse_at_center,transparent_10%,black_80%)]"
       />
 
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-linear-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent z-20 mb-4 sm:mb-6">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-linear-to-b from-neutral-100 to-neutral-300 bg-clip-text text-transparent z-20 mb-4 sm:mb-6">
         Tools in My Arsenal
       </h2>
 
