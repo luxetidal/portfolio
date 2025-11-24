@@ -13,7 +13,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     <div className="min-h-screen flex flex-col">
       {showLayout && <Header />}
       <main className="grow">{children}</main>
-      <Footer />
+      {showLayout && <Footer />}
       <SpeedInsights />
     </div>
   );
