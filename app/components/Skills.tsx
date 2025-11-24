@@ -141,12 +141,16 @@ export const Skills: React.FC = () => {
     <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center px-4 py-12 sm:py-20 bg-black">
       <div
         className={cn(
-          "absolute inset-0 z-0 pointer-events-none",
+          "absolute inset-0",
+          "bg-[radial-gradient(#404040_1px,transparent_1px)]",
           "bg-size-[20px_20px]",
-          "bg-[radial-gradient(#404040_1px,transparent_1px)]"
+          "animate-pulse-slow"
         )}
       />
-      <div className="absolute inset-0 z-10 pointer-events-none bg-black mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div
+        className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black 
+                    mask-[radial-gradient(ellipse_at_center,transparent_10%,black_80%)]"
+      />
 
       <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-linear-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent z-20 mb-4 sm:mb-6">
         Tools in My Arsenal
